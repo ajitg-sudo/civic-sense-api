@@ -1,47 +1,4 @@
 
-// const express = require('express');
-// const cookieParser = require('cookie-parser')
-// const cors= require('cors');
-// const connectDb = require('./config/db');
-// require('dotenv').config()
-// const authRoute= require('./routes/authRoute')
-// const postRoute= require('./routes/postRoute')
-// const userRoute = require('./routes/userRoute');
-// const localIssueRoute = require('./routes/localIssueRoute');
-// const passport = require('./controllers/googleController');
-// const adminRoutes = require('./routes/adminRoute');
-
-// const app = express()
-// app.use(express.json())
-// app.use(cookieParser())
-
-
-// const corsOptions = {
-//     origin:process.env.FRONTEND_URL,
-//     credentials:true,
-// }
-// app.use(cors(corsOptions))
-
-
-// connectDb()
-// app.use(passport.initialize())
-
-// //api route
-// app.use('/auth',authRoute)
-// app.use('/users',postRoute)
-// app.use('/users',userRoute)
-// app.use('/api/local-issues', localIssueRoute)
-// // app.use('/admin', adminRoutes);
-// app.use('/api/admin', adminRoutes);
-
-
-// app.get('/', (req, res) => {
-//     res.send('API is running...');
-// });
-
-// const PORT = process.env.PORT || 8000;
-// app.listen(PORT, () => console.log(`server listening on ${PORT}`))
-
 
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -98,4 +55,4 @@ app.get('/', (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`server listening on ${PORT}`));
+app.listen(PORT, '0.0.0.0',  () => console.log(`server listening on ${PORT}`));
